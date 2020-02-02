@@ -8,9 +8,153 @@
         <servlet-name>hello</servlet-name>
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
+     <servlet>  
+    <description></description>  
+    <display-name>ProfileServlet</display-name>  
+    <servlet-name>ProfileServlet</servlet-name>  
+    <servlet-class>ProfileServlet</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>ProfileServlet</servlet-name>  
+    <url-pattern>/ProfileServlet</url-pattern>  
+  </servlet-mapping>  
+  
+  
+    <servlet>
+        <description></description>
+        <display-name>CloseServlet</display-name>
+        <servlet-name>CloseServlet</servlet-name>
+        <servlet-class>CloseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CloseServlet</servlet-name>
+        <url-pattern>/CloseServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description></description>
+        <display-name>PasswordServlet</display-name>
+        <servlet-name>PasswordServlet</servlet-name>
+        <servlet-class>PasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PasswordServlet</servlet-name>
+        <url-pattern>/PasswordServlet</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <description></description>
+        <display-name>PreVotePollController</display-name>
+        <servlet-name>PreVotePollController</servlet-name>
+        <servlet-class>controller.PreVotePollController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PreVotePollController</servlet-name>
+        <url-pattern>/PreVotePollController</url-pattern>
+    </servlet-mapping> 
+    <servlet>
+        <description></description>
+        <display-name>LoginController</display-name>
+        <servlet-name>LoginController</servlet-name>
+        <servlet-class>controller.LoginController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginController</servlet-name>
+        <url-pattern>/LoginController</url-pattern>
+    </servlet-mapping>
+   <servlet>
+        <description></description>
+        <display-name>VotePollController</display-name>
+        <servlet-name>VotePollController</servlet-name>
+        <servlet-class>controller.VotePollController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VotePollController</servlet-name>
+        <url-pattern>/VotePollController</url-pattern>
+    </servlet-mapping>
+     <servlet>
+        <description></description>
+        <display-name>SignUpController</display-name>
+        <servlet-name>SignUpController</servlet-name>
+        <servlet-class>controller.SignUpController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignUpController</servlet-name>
+        <url-pattern>/SignUpController</url-pattern>
+    </servlet-mapping>
+         <servlet>
+        <description></description>
+        <display-name>CreatePollController</display-name>
+        <servlet-name>CreatePollController</servlet-name>
+        <servlet-class>controller.CreatePollController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreatePollController</servlet-name>
+        <url-pattern>/CreatePollController</url-pattern>
+    </servlet-mapping>
+        
+    <servlet>
+        <display-name>UserListController</display-name>
+        <servlet-name>UserListController</servlet-name>
+        <servlet-class>controller.UserListController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserListController</servlet-name>
+        <url-pattern>/UserListController</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <display-name>PollByIdController</display-name>
+        <servlet-name>PollByIdController</servlet-name>
+        <servlet-class>controller.PollByIdController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PollByIdController</servlet-name>
+        <url-pattern>/PollByIdController</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <display-name>PollDetailsByIdController</display-name>
+        <servlet-name>PollDetailsByIdController</servlet-name>
+        <servlet-class>controller.PollDetailsByIdController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PollDetailsByIdController</servlet-name>
+        <url-pattern>/PollDetailsByIdController</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <display-name>PollUserListController</display-name>
+        <servlet-name>PollUserListController</servlet-name>
+        <servlet-class>controller.PollUserListController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PollUserListController</servlet-name>
+        <url-pattern>/PollUserListController</url-pattern>
+    </servlet-mapping>    
+    <servlet>
+        <display-name>HomeServlet</display-name>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>HomeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/HomeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>  
+    <description></description>  
+    <display-name>LogoutServlet</display-name>  
+    <servlet-name>LogoutServlet</servlet-name>  
+    <servlet-class>LogoutServlet</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>LogoutServlet</servlet-name>  
+    <url-pattern>/LogoutServlet</url-pattern>  
+  </servlet-mapping>  
+    
+    
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
+     <welcome-file-list>
+        <welcome-file>/login.html</welcome-file>
+    </welcome-file-list>
 </web-app>

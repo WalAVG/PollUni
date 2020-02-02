@@ -16,39 +16,51 @@ import poll.data.model.QuestionType;
  */
 public class QuestionImpl implements Question {
     
-    private int id;
-    private int question_number;
+    private int poll_id;
+    private int question_position;
+    private int answers_number;
     private String text;
-    private QuestionType question_type;
+    private int question_type;
     private int minChoice;
     private int maxChoice;
+    private int check;
     private List<Answer> answers;
     
+    public QuestionImpl(int pollId, int position, String text, int type){
+        this.poll_id = pollId;
+        this.question_position = position;
+        this.text = text;
+        this.question_type = type;
+        this.check = 0;
+        answers = null;
+    }
     public QuestionImpl(){
-        id = 0;
-        question_number = 0;
-        text = "";
+        this.poll_id = 0;
+        this.question_position = 0;
+        this.text = "";
+        this.question_type = 0;
+        this.check = 0;
         answers = null;
     }
 
     @Override
     public int getID() {
-        return id;
+        return poll_id;
     }
 
     @Override
     public void setID(int id) {
-        this.id=id;
+        this.poll_id=id;
     }
 
     @Override
     public int getNumber() {
-        return question_number;
+        return question_position;
     }
 
     @Override
     public void setNumber(int n) {
-        this.question_number=n;
+        this.question_position=n;
     }
 
     @Override
@@ -57,18 +69,18 @@ public class QuestionImpl implements Question {
     }
 
     @Override
-    public void setText() {
+    public void setText(String text) {
         this.text=text;
     }
 
     @Override
     public int getType() {
-        return question_type.ordinal();
+        return question_type;
     }
 
     @Override
-    public void setType(String i) {
-        this.question_type=QuestionType.valueOf(i);
+    public void setType(int i) {
+        this.question_type=i;
     }
 
     @Override
@@ -105,6 +117,23 @@ public class QuestionImpl implements Question {
     @Override
     public void removeAnswer(Answer answer) {
         this.answers.remove(answer);
+    }
+
+    @Override
+    public int getAnswersNumber() {
+        return this.answers_number;
+    }
+
+    @Override
+    public void setAnswersNumber(int i) {
+        this.answers_number = i;
+    }
+
+    public void setCheck(int checkAnswer) {
+        this.check = checkAnswer;
+    }
+    public int getCheck (){
+        return check;
     }
     
 }

@@ -20,10 +20,10 @@ public interface Question {
     void setNumber(int n);
     
     String getText();
-    void setText();
+    void setText(String text);
     
     int getType();
-    void setType(String i);
+    void setType(int i);
     
     int getMinChoice();
     int getMaxChoice();
@@ -33,5 +33,8 @@ public interface Question {
     void setAnswers(List<Answer> answers);
     void addAnswer(Answer answer);
     void removeAnswer(Answer answer);
+    
+    int getAnswersNumber();
+    void setAnswersNumber(int i);
     
 }

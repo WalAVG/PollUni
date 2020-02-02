@@ -29,7 +29,22 @@ public class MyServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet MyServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
+            out.println("\n" +
+"            <form action=\"/my-handling-form-page\" method=\"post\">\n" +
+"                <div>\n" +
+"                    <label for=\"name\">Name:</label>\n" +
+"                    <input type=\"text\" id=\"name\" name=\"user_name\">\n" +
+"                </div>\n" +
+"                <div>\n" +
+"                    <label for=\"mail\">E-mail:</label>\n" +
+"                    <input type=\"email\" id=\"mail\" name=\"user_mail\">\n" +
+"                </div>\n" +
+"                <div>\n" +
+"                    <label for=\"msg\">Message:</label>\n" +
+"                    <textarea id=\"msg\" name=\"user_message\"></textarea>\n" +
+"                </div>\n" +
+"            </form>"
+                    + "</body>");
             out.println("</html>");
         }
     }

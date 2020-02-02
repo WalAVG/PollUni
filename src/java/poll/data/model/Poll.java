@@ -56,4 +56,10 @@ public interface Poll {
     void addQuestion(Question question);
     void removeQuestion(Question question);
     
+    int getQuestionsNumber();
+    void setQuestionsNumber(int i);
+    
+    int getAuthorId();
+    void setAuthorId(int i);
+    
 }

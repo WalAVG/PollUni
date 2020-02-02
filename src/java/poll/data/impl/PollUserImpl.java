@@ -24,6 +24,13 @@ public class PollUserImpl implements PollUser {
         email="";
     }
     
+    public PollUserImpl(String name, String email, String password, int id){
+        this.username=name;
+        this.password=password;
+        this.email=email;
+        this.id=id;
+    }
+    
     @Override
     public int getID(){
         return id;

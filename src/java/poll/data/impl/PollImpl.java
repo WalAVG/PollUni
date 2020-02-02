@@ -18,6 +18,7 @@ import poll.data.model.Question;
 public class PollImpl implements Poll {
 
     private int id;
+    private int questions_number;
     private String title;
     private Date creation_date;
     private Date edit_date;
@@ -29,15 +30,23 @@ public class PollImpl implements Poll {
     private String limitedPassword;
     private List<PollUser> limitedUsers;
     private PollUser author;
+    private int authorId;
     private List<Question> questions;
     
     public PollImpl(){
         id = 0;
         title = "";
+        creation_date = null;
+        edit_date = null;
+        close_date = null;
+        delete_date= null;
         published = false;
         closed = false;
         limited = false;
+        limitedPassword = null;
         limitedUsers = null;
+        author = null;
+        authorId = 0;
         questions = null;
     }
 
@@ -185,5 +194,25 @@ public class PollImpl implements Poll {
     public void removeQuestion(Question question) {
         this.questions.remove(question);
     }
+    
+    @Override
+    public int getQuestionsNumber(){
+        return this.questions_number;
+    }
+    @Override
+    public void setQuestionsNumber(int i){
+        this.questions_number = i;
+    }
+
+    @Override
+    public int getAuthorId() {
+        return authorId;
+    }
+
+    @Override
+    public void setAuthorId(int i) {
+        this.authorId = i;
+    }
+
     
 }

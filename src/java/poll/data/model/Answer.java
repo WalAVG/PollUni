@@ -11,14 +11,22 @@ package poll.data.model;
  */
 public interface Answer {
     
-    int getID();
-    void setID(int id);
+    String getID();
+    void setID(String id);
+    String getQuestionID();
+    void setQuestionID(String questionId);
     
     String getText();
     void setText(String text);
+    float getNumber();
+    void setNumber(float answerNumber);
     
     int getLmin();
     int getLmax();
     void setLenght(int min, int max);
+    int getVotes();
+    void setVotes(int votes);
+    int getPosition();
+    void setPosition(int position);
     
 }

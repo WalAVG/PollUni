@@ -11,11 +11,10 @@ package poll.data.model;
  */
 //public class QuestionType{
 
-    public enum QuestionType {
-    
-    singlebox,
-    multibox,
-    textbox;
+    public enum QuestionType { 
+        singleBox,
+        multiBox,
+        textBox;
     }
 
 //}

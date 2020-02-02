@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--CSS-->
+        <link rel="stylesheet" href="style/style.css">
+        <!--JQUERY-->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>  
+        <script src="js/addQuestions.js"></script>
+        <script src="js/findUser.js"></script>
+        <script src="js/findPoll.js"></script>
+        <script type='text/javascript'>
+            
+           
+            
+        
+    </script>
+    </head>
+    <body>
+        <form id="loginForm" name="loginForm" action="LoginController" method="post">
+            Login
+            <div>            
+                <label for="name_label">Name:</label>
+                <input type="text" name="username" id="loginName">
+            </div>
+            <div>            
+                <label for="name_label">Email:</label>
+                <input type="email" name="email" id="loginEmail">
+            </div>
+            <div>            
+                <label for="password_label">Password:</label>
+                <input type="password" name="password" id="loginPassword">
+            </div>
+            <div>            
+                <label for="login_label"></label>
+                <input type="hidden" name="action" value="login">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+
+        <br />
+        
+        <form action="SignUpController" method="post">
+            Register
+            <div>            
+                <label>Name:</label>
+                <input type="text" name="username">
+            </div>
+            <div>            
+                <label>Email:</label>
+                <input type="email" name="email">
+            </div>
+            <div>            
+                <label>Password:</label>
+                <input type="password" name="password">
+            </div>
+            <div>            
+                <label></label>
+                <input type="hidden" name="action" value="register">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+        
+        <br>
+        
+        <form id="createPoll" action="CreatePollController" method="post">
+            <div>
+                Poll
+            </div>
+            <div>
+                <input type="text" id ="poll_title" placeholder="TITOLO SONDAGGIO" name="poll_title">
+            </div>
+            <br/>
+            <div>Number of questions:
+                <input type="number" id="questionNumber" name="questionNumber" value="0" readonly></a><br />
+            </div>
+            <p id="question" name="question" hidden>
+            <div id="container"></div>
+            <button type="button" onclick="addQuestion()">+</button>
+            <div>Set a password for this poll
+                <input type="checkbox" name="pollPasswordCheck" id="pollPasswordCheck"/><br/>
+                <input type="text" id="pollPassword" name="pollPassword"/>
+            </div>
+                
+            <div>
+                <input type="submit" name="Send">
+            </div>
+        </form>
+
+
+        <br/>
+
+        
+        <form id="userByID" action="UserListController" method="post">
+            <div>
+                UserByID
+            </div>
+            <div>
+                <input type="number" id ="userID" placeholder="ID utente" name="userID">
+            </div>
+            <div>
+                <button type="button" id="findUserButton" onclick="findUser()">AJAX</button>
+            </div>
+            <div>Lista utenti:</div>
+            <div id="userSearchList" name="userSearchList"></div>
+        
+        </form>
+        
+        <form id="pollByID" action="PollByIdController" method="post">
+            <div>
+                PollByID
+            </div>
+            <div>
+                <input type="number" id ="pollID" placeholder="ID poll" name="pollID">
+            </div>
+            <div>
+                <button type="button" id="findPollButton" onclick="findPollById()">pollAJAX</button>
+            </div>
+            <div>Lista utenti:</div>
+            <div id="pollByIdSearchList" name="pollByIdSearchList"></div>
+        
+        </form>
+
+        
+    </body>
+</html>

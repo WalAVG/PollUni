@@ -5,10 +5,22 @@
  */
 package poll.data.dao;
 
+import poll.data.impl.AnswerImpl;
+
+
 /**
  *
  * @author gigan
  */
-public class AnswerDAO {
+public interface AnswerDAO {
+    
+            String createAnswer(AnswerImpl answer);
+
+    public String getAnswerByNumberPosition(int indexQ, int index, int pollId);
+
+    public String getAnswerById(String answerId);
+
+    public int getVotesByNumberPosition(int indexQ, int index, int pollId);
+
     
 }
